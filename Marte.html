@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>
+			Weight In Planets
+		</title>
+		<style type="text/css">
+			
+		</style>
+	</head>
+	<body>
+	<!--h1=titulo, existen h1, h2, h3-->
+		<h1>
+		Tu peso en otro planeta
+		</h1>
+		<p>
+		El peso en los planetas es diferente, debido a que la gravedad es diferente, averigua cuanto pesas en el planeta que quieras.
+		</p>
+	<!--p=parrafo-->		
+		<p>
+		The weight in the planets is diferent, because the gravity is diferent, If you want know how much weight, see.
+		</p>
+		<script type="text/javascript">
+			var user = prompt("Cual es tu peso?");
+			var Weight = parseInt(user);
+			var g_Earth = 9.8;
+			var g_Mars = 3.7;
+			var g_Jupiter = 24.8;
+			var Weight_Final = Weight * g_Mars / g_Earth;
+			Weight_Final = parseInt(Weight_Final);
+			document.write("Si pesas <strong>" + Weight + "Kg</strong> en la Tierra, en Marte pesas " + Weight_Final+"Kg \n"+"If You weight is " + Weight + "Kg in the Earth, in Mars is " + Weight_Final + "Kg");
+		</script>
+	</body>
+</html>
