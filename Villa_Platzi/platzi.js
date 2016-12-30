@@ -7,7 +7,14 @@
 var vp = document.getElementById("villaplatzi");
 var papel = vp.getContext("2d");
 document.addEventListener("keydown", moverLobo);
-
+var botonarriba = document.getElementById("botonUp");
+botonarriba.addEventListener("click", loboarriba);
+var botonizqui = document.getElementById("botonLeft");
+botonizqui.addEventListener("click", loboizqui);
+var botonabajo = document.getElementById("botonDown");
+botonabajo.addEventListener("click", loboabajo);
+var botonaderecha = document.getElementById("botonRight");
+botonaderecha.addEventListener("click", loboderecha);
 var xLobo = 150;
 var yLobo = 100;
 
@@ -202,4 +209,28 @@ function moverLobo(e)
 			dibujar(xLobo, yLobo);
 		break;
 	}
+}
+function loboarriba()
+{
+	var movimiento = 44;
+	yLobo = yLobo - movimiento;
+	dibujar(xLobo, yLobo);
+}
+function loboizqui()
+{
+	var movimiento = 44;
+	xLobo = xLobo - movimiento;
+	dibujar(xLobo, yLobo);
+}
+function loboabajo()
+{
+	var movimiento = 44;
+	yLobo = yLobo + movimiento;
+	dibujar(xLobo, yLobo);
+}
+function loboderecha()
+{
+	var movimiento = 44;
+	xLobo = xLobo + movimiento;
+	dibujar(xLobo, yLobo);
 }
